@@ -1,0 +1,11 @@
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\bin\Debug\netcoreapp3.1\appsettings.json
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\bin\Debug\netcoreapp3.1\CopaFilmes.API.exe
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\obj\Debug\netcoreapp3.1\CopaFilmes.API.csprojAssemblyReference.cache
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\obj\Debug\netcoreapp3.1\staticwebassets\CopaFilmes.API.StaticWebAssets.Manifest.cache
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\obj\Debug\netcoreapp3.1\staticwebassets\CopaFilmes.API.StaticWebAssets.xml
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\obj\Debug\netcoreapp3.1\CopaFilmes.API.AssemblyInfoInputs.cache
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\obj\Debug\netcoreapp3.1\CopaFilmes.API.AssemblyInfo.cs
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\obj\Debug\netcoreapp3.1\CopaFilmes.API.RazorTargetAssemblyInfo.cache
+F:\Estudos\CopaFilmes\CopaFilmes\CopaFilmes.API\obj\Debug\netcoreapp3.1\CopaFilmes.API.MvcApplicationPartsAssemblyInfo.cache
