@@ -1,0 +1,18 @@
+﻿<div class="card border-primary"
+     ng-controller="ListaDeFilmesController as lista">
+    <div class="card-header bg-primary"
+         style="font-size: large;
+                color: white;
+                font-weight: bold">
+        Lista de Filmes
+    </div>
+    <div class="row-cols-4">
+        <div ng-repeat="filme in lista.filmes">
+            <div ng-if="$index % 4 == 0" class="w-100"></div>
+            <div class="col card">
+                {{ filme.titulo }}
+                {{ filme.ano }}
+            </div>
+        </div>
+    </div>
+</div>
