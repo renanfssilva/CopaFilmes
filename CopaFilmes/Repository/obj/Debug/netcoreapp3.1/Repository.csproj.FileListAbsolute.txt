@@ -1,0 +1,13 @@
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Contracts.dll
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Entities.dll
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Repository.deps.json
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Repository.dll
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Repository.pdb
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Contracts.pdb
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Entities.pdb
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.dll
+F:\Estudos\CopaFilmes\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.pdb

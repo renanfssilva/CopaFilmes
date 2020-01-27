@@ -8,16 +8,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CopaFilmes.WebAPI")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("CopaFilmes.WebAPI")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CopaFilmes.WebAPI")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: AssemblyCompany("CopaFilmes.WebAPI")]
+[assembly: AssemblyConfiguration("Debug")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyInformationalVersion("1.0.0")]
+[assembly: AssemblyProduct("CopaFilmes.WebAPI")]
+[assembly: AssemblyTitle("CopaFilmes.WebAPI")]
+[assembly: AssemblyVersion("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

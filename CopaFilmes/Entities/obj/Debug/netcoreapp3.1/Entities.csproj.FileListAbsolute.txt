@@ -1,0 +1,8 @@
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+F:\Estudos\CopaFilmes\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
