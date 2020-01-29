@@ -6,6 +6,6 @@ namespace Contracts
     public interface IFilmeRepository
     {
         IEnumerable<Filme> GetFilmes();
-        IEnumerable<Filme> GetFilmesPorId(string[] id);
+        IEnumerable<Filme> GetFilmesOrdenadosPorTitulo(IEnumerable<string> id);
     }
 }

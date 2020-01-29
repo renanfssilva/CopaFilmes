@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using Contracts;
 using Entities.DTOs;
@@ -10,9 +11,10 @@ using Microsoft.Extensions.Logging;
 namespace CopaFilmes.WebAPI.Controllers
 {
     [ApiController]
-    [Route("api/filmes")]
+    [Route("api")]
     public class FilmeController : ControllerBase
     {
+        private const int QuantidadeDeTurnos = 3;
         private readonly IFilmeRepository _filmeRepository;
         private readonly ILogger<FilmeController> _logger;
         private IMapper _mapper;
@@ -24,6 +26,7 @@ namespace CopaFilmes.WebAPI.Controllers
             _mapper = mapper;
         }
 
+        [Route("filmes")]
         [HttpGet]
         public IActionResult GetFilmes()
         {
@@ -42,30 +45,77 @@ namespace CopaFilmes.WebAPI.Controllers
             }
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetVencedores(string filmesSelecionados)
+        [Route("vencedores")]
+        [HttpGet]
+        public IActionResult GetVencedores([FromBody]string[] idsSelecionados)
         {
             try
             {
-                var finalistas = new List<FilmeDto>();
+                var filmesSelecionados = _filmeRepository.GetFilmesOrdenadosPorTitulo(idsSelecionados.ToList()).ToList();
+                _logger.LogInformation("Todos os ids de filmes foram consultados.");
 
-                finalistas.Add(new FilmeDto
-                {
-                    Id = filmesSelecionados
-                });
+                var vencedores = ObtenhaVencedores(filmesSelecionados);
 
-                finalistas.Add(new FilmeDto
-                {
-                    Id = filmesSelecionados
-                });
-
-                return Ok(finalistas);
+                var filmesResult = _mapper.Map<IEnumerable<FilmeDto>>(vencedores);
+                return Ok(filmesResult);
             }
             catch (Exception)
             {
                 _logger.LogError("Não foi possível descobrir quais foram os finalistas do campeonato.");
                 return StatusCode(500, "Internal server error");
             }
+        }
+
+        private IEnumerable<Filme> ObtenhaVencedores(IReadOnlyList<Filme> filmesSelecionados)
+        {
+            return new List<Filme>
+            {
+                ObtenhaVencedorDaDisputa(new Disputa
+                {
+                    Filme1 = ObtenhaVencedorDaDisputa(
+                        new Disputa
+                        {
+                            Filme1 = filmesSelecionados[0],
+                            Filme2 = filmesSelecionados[7]
+                        }),
+                    Filme2 = ObtenhaVencedorDaDisputa(
+                        new Disputa
+                        {
+                            Filme1 = filmesSelecionados[1],
+                            Filme2 = filmesSelecionados[6]
+                        })
+                }),
+                ObtenhaVencedorDaDisputa(new Disputa
+                {
+                    Filme1 = ObtenhaVencedorDaDisputa(
+                        new Disputa
+                        {
+                            Filme1 = filmesSelecionados[2],
+                            Filme2 = filmesSelecionados[5]
+                        }),
+                    Filme2 = ObtenhaVencedorDaDisputa(
+                        new Disputa
+                        {
+                            Filme1 = filmesSelecionados[3],
+                            Filme2 = filmesSelecionados[4]
+                        })
+                })
+            };
+        }
+
+        private static Filme ObtenhaVencedorDaDisputa(Disputa disputa)
+        {
+            if (disputa.Filme1.Nota > disputa.Filme2.Nota)
+            {
+                return disputa.Filme1;
+            }
+
+            if (disputa.Filme1.Nota < disputa.Filme2.Nota)
+            {
+                return disputa.Filme2;
+            }
+
+            return string.Compare(disputa.Filme1.Titulo, disputa.Filme2.Titulo, StringComparison.InvariantCultureIgnoreCase) < 0 ? disputa.Filme1 : disputa.Filme2;
         }
     }
 }

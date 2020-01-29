@@ -20,7 +20,6 @@ namespace Repository
 
             var content = JsonConvert.DeserializeObject<JToken>(response.Content);
 
-            //Get the movies list from api
             var filmes = content.Select(filme => new Filme
             {
                 Id = (string)filme["id"],
@@ -32,15 +31,26 @@ namespace Repository
             return filmes;
         }
 
-        public IEnumerable<Filme> GetFilmesPorId(string[] filmesIds)
+        public IEnumerable<Filme> GetFilmesOrdenadosPorTitulo(IEnumerable<string> filmesIds)
         {
-            var todosFilmes = GetFilmes();
+            var client = new RestClient("http://copafilmes.azurewebsites.net/api/filmes");
+            var request = new RestRequest(Method.GET);
+            var response = client.Execute(request);
 
-            return (from filme in todosFilmes
+            if (!response.IsSuccessful) return null;
+
+            var content = JsonConvert.DeserializeObject<JToken>(response.Content);
+            
+            return (from filme in content
                     from id in filmesIds
-                    where filme.Id.Equals(id)
-                    select filme
-                    ).ToList();
+                    where id.Equals((string)filme["id"])
+                    select new Filme
+                    {
+                        Id = (string)filme["id"],
+                        Titulo = (string)filme["titulo"],
+                        Ano = (int)filme["ano"],
+                        Nota = (double)filme["nota"]
+                    }).ToList().OrderBy(filme => filme.Titulo);
         }
     }
 }
