@@ -15,7 +15,7 @@ A Copa do mundo de filmes funciona da seguinte maneira: uma lista inicial de 8 f
 ## Desenvolvido com
 
 * [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
-* [Angular](https://angular.io/)
+* [React](https://reactjs.org/)
 
 ## Autor
 
