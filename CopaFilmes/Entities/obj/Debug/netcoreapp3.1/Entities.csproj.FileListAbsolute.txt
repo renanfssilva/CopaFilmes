@@ -14,3 +14,11 @@ D:\CopaFilmes-iniciando-projeto\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Enti
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Entities\obj\Debug\netcoreapp3.1\Entities.pdb

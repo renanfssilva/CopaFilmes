@@ -24,3 +24,16 @@ D:\CopaFilmes-iniciando-projeto\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Re
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.dll
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Repository.deps.json
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Repository.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Repository.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Contracts.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Entities.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Contracts.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Repository\obj\Debug\netcoreapp3.1\Repository.pdb

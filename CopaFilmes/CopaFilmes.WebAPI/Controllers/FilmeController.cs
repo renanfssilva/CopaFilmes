@@ -14,7 +14,6 @@ namespace CopaFilmes.WebAPI.Controllers
     [Route("api")]
     public class FilmeController : ControllerBase
     {
-        private const int QuantidadeDeTurnos = 3;
         private readonly IFilmeRepository _filmeRepository;
         private readonly ILogger<FilmeController> _logger;
         private IMapper _mapper;
@@ -66,41 +65,79 @@ namespace CopaFilmes.WebAPI.Controllers
             }
         }
 
-        private IEnumerable<Filme> ObtenhaVencedores(IReadOnlyList<Filme> filmesSelecionados)
+        private static IEnumerable<Filme> ObtenhaVencedores(List<Filme> filmesSelecionados)
         {
-            return new List<Filme>
+            var turnos = new List<Turno>();
+            var quantidadeDeTurnos = (int)Math.Floor(Math.Log2(filmesSelecionados.Count) - 1);
+            var quantidadeDeFilmes = filmesSelecionados.Count;
+
+            for (var i = 0; i < quantidadeDeTurnos; ++i)
             {
-                ObtenhaVencedorDaDisputa(new Disputa
+                turnos.Add(new Turno());
+                turnos[i].Disputas = new List<Disputa>();
+                quantidadeDeFilmes = filmesSelecionados.Count;
+
+                if (i == 0)
                 {
-                    Filme1 = ObtenhaVencedorDaDisputa(
-                        new Disputa
-                        {
-                            Filme1 = filmesSelecionados[0],
-                            Filme2 = filmesSelecionados[7]
-                        }),
-                    Filme2 = ObtenhaVencedorDaDisputa(
-                        new Disputa
-                        {
-                            Filme1 = filmesSelecionados[1],
-                            Filme2 = filmesSelecionados[6]
-                        })
-                }),
-                ObtenhaVencedorDaDisputa(new Disputa
+                    for (var j = 0; j < quantidadeDeFilmes / (2 * (i + 1)); ++j)
+                    {
+                        turnos[i].Disputas.Add(new Disputa());
+                        turnos[i].Disputas[j].Filme1 = filmesSelecionados[j];
+                        turnos[i].Disputas[j].Filme2 = filmesSelecionados[quantidadeDeFilmes - j - 1];
+                    }
+
+                    filmesSelecionados = turnos[i].Disputas.Select(ObtenhaVencedorDaDisputa).ToList();
+                }
+                else
                 {
-                    Filme1 = ObtenhaVencedorDaDisputa(
-                        new Disputa
-                        {
-                            Filme1 = filmesSelecionados[2],
-                            Filme2 = filmesSelecionados[5]
-                        }),
-                    Filme2 = ObtenhaVencedorDaDisputa(
-                        new Disputa
-                        {
-                            Filme1 = filmesSelecionados[3],
-                            Filme2 = filmesSelecionados[4]
-                        })
-                })
-            };
+                    for (var j = 0; j < quantidadeDeFilmes; j += 2)
+                    {
+                        turnos[i].Disputas.Add(new Disputa());
+                        turnos[i].Disputas[j / 2].Filme1 = filmesSelecionados[j];
+                        turnos[i].Disputas[j / 2].Filme2 = filmesSelecionados[j + 1];
+                    }
+
+                    filmesSelecionados = turnos[i].Disputas.Select(ObtenhaVencedorDaDisputa).ToList();
+                }
+            }
+
+            return filmesSelecionados.OrderByDescending(filme => filme.Nota).ThenBy(filme => filme.Titulo);
+
+            //Se a quantidade de filmes for sempre 8, pode ser utilizado o código comentado abaixo:
+
+            //return new List<Filme>
+            //{
+            //    ObtenhaVencedorDaDisputa(new Disputa
+            //    {
+            //        Filme1 = ObtenhaVencedorDaDisputa(
+            //            new Disputa
+            //            {
+            //                Filme1 = filmesSelecionados[0],
+            //                Filme2 = filmesSelecionados[7]
+            //            }),
+            //        Filme2 = ObtenhaVencedorDaDisputa(
+            //            new Disputa
+            //            {
+            //                Filme1 = filmesSelecionados[1],
+            //                Filme2 = filmesSelecionados[6]
+            //            })
+            //    }),
+            //    ObtenhaVencedorDaDisputa(new Disputa
+            //    {
+            //        Filme1 = ObtenhaVencedorDaDisputa(
+            //            new Disputa
+            //            {
+            //                Filme1 = filmesSelecionados[2],
+            //                Filme2 = filmesSelecionados[5]
+            //            }),
+            //        Filme2 = ObtenhaVencedorDaDisputa(
+            //            new Disputa
+            //            {
+            //                Filme1 = filmesSelecionados[3],
+            //                Filme2 = filmesSelecionados[4]
+            //            })
+            //    })
+            //};
         }
 
         private static Filme ObtenhaVencedorDaDisputa(Disputa disputa)
