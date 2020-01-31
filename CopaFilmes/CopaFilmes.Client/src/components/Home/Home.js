@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css'
 import { Button, Col, Row, Jumbotron } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 import Aux from '../../hoc/Auxiliary/Auxiliary';
 import Filme from '../../components/FilmeComponents/Filme/Filme';
 
@@ -12,6 +12,11 @@ class Home extends Component {
     componentDidMount = () => {
         let url = '/api/filmes';
         this.props.onGetData(url, { ...this.props });
+    }
+
+    state = {
+        filmesSelecionados: {},
+        isFormValid: false
     }
 
     render() {
@@ -43,11 +48,11 @@ class Home extends Component {
                         </strong>
                     </Col>
                     <Col sm={4} className={'col-botao-gera'}>
-                        <Link to='/filme-list' style={{ width: '100%' }}>
-                            <Button className={'float-right'}>
+                        <LinkContainer to='/resultado' className={'ml-auto'}>
+                            <Button type='submit' disabled={!this.state.isFormValid} style={{ width: '100%' }}>
                                 GERAR MEU CAMPEONATO
                             </Button>
-                        </Link>
+                        </LinkContainer>
                     </Col>
                 </Row>
                 <br />
