@@ -1,0 +1,14 @@
+.filme-card {
+    width: 15rem;
+    margin: 1.4rem;
+}
+
+.card-items {
+    display: flex;
+    align-items: center;
+}
+
+.tab-space {
+    position: absolute;
+    left: 4rem;
+}
