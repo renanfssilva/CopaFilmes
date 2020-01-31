@@ -20,3 +20,14 @@ D:\CopaFilmes-iniciando-projeto\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Con
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.csproj.CopyComplete
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.dll
 D:\CopaFilmes-iniciando-projeto\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\bin\Debug\netcoreapp3.1\Contracts.deps.json
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\bin\Debug\netcoreapp3.1\Contracts.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\bin\Debug\netcoreapp3.1\Contracts.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\bin\Debug\netcoreapp3.1\Entities.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.csprojAssemblyReference.cache
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.AssemblyInfoInputs.cache
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.AssemblyInfo.cs
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.csproj.CopyComplete
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.dll
+D:\CopaFilmes-alteracoes-api\CopaFilmes\Contracts\obj\Debug\netcoreapp3.1\Contracts.pdb
